@@ -3,9 +3,9 @@ import { Grid, Container, Hidden, Icon, IconButton, Drawer, List, ListItem } fro
 import styled from 'styled-components'
 import { useSelector } from "react-redux";
 
-import Flags from '../Flags';
-import { I18nProvider} from '../../locales';
-import translate from '../../locales/translate';
+import Flags from '../../Flags';
+import { I18nProvider} from '../../../locales';
+import translate from '../../../locales/translate';
 
 // Images
 // import Logo from '../images/logos/logo_beebuzz_branco.png'
@@ -25,41 +25,6 @@ const Bar = styled(Grid)`
   max-width: 1280px;
   padding: 12px 0;
 `
-
-// const BarLogo = styled.img`
-//   height: 40px;
-// `
-
-// const OptionButton = styled(Button)`
-//   color: ${props => props.colored ? 'var(--secondary)' : 'white'} !important;
-//   transition: all 0.5s !important;
-//   text-transform: none !important;
-//   height: 100%;
-//   margin: 0 8px !important;
-//   padding: 12px 24px !important;
-//   font-weight: 700 !important;
-//   border-radius: 25px !important;
-//   &:hover {
-//     background-color: var(--lightsecondary) !important;
-//     color: white !important;
-//   }
-// `
-
-// const RegisterButton = styled(Button)`
-//   color: white !important;
-//   background-color: var(--secondary) !important;
-//   transition: all 0.5s !important;
-//   text-transform: none !important;
-//   height: 100%;
-//   margin: 0 8px !important;
-//   padding: 12px 24px !important;
-//   font-weight: 700 !important;
-//   border-radius: 25px !important;
-//   &:hover {
-//     background-color: var(--lightsecondary) !important;
-//     color: white !important;
-//   }
-// `
 
 const MenuButton = styled(IconButton)`
   color: ${props => props.colored ? 'var(--primary)' : 'white'} !important;
@@ -110,19 +75,6 @@ const NavBar = () => {
             </Grid>
             <Grid item>
               <Flags />
-              {/* <Hidden smDown>
-                {BarButtons.map((btn, index) => (
-                  <OptionButton key={`bar-btn-${index}`} colored={colored}>
-                    {btn.text}
-                  </OptionButton>
-                ))}
-                <OptionButton colored={colored}>
-                  {translate('navbar.enterBtn')}
-                </OptionButton>
-                <RegisterButton colored={colored} className="animated">
-                {translate('navbar.logBtn')}
-                </RegisterButton>
-              </Hidden> */}
               <Hidden mdUp>
                 <MenuButton colored={colored} style={{ marginRight: 32 }} onClick={() => { setMobileDrawer(true) }}>
                   <Icon>menu</Icon>

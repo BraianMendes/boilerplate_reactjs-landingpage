@@ -8,16 +8,14 @@ import {
 } from "react-router-dom";
 import './assets/css/index.css';
 
-import HomeScreen from './screens/HomeScreen';
+import HomePage from './pages/HomePage';
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <HomeScreen />
-          </Route>
+          <Route path="/" component={HomePage} />
         </Switch>
       </Router>
     </Provider>
